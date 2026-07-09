@@ -1,0 +1,16 @@
+[tools]
+node = '22'
+
+[env]
+NODE_ENV="development"
+LOG_ENV="ON"
+
+MG_WEATHER_PORT = "3006"
+MG_WEATHER_BACKEND_PORT = "8008"
+
+DB_PROVIDER = "sqlite"
+
+[tasks]
+all = { run = """
+    npx nx run-many --target=dev --projects=mg-weather,mg-weather-backend --parallel=2
+""" }

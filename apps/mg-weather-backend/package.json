@@ -1,0 +1,38 @@
+{
+    "name": "mg-weather-backend",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/main.ts",
+        "start": "tsx src/main.ts",
+        "db:push": "prisma db push",
+        "db:generate": "prisma generate",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "format": "npx biome format --write .",
+        "lint": "npx biome lint --write .",
+        "check": "npx biome check --write . && npm run typecheck"
+    },
+    "dependencies": {
+        "@nestjs/common": "11.0.16",
+        "@nestjs/core": "11.0.16",
+        "@nestjs/platform-express": "11.0.16",
+        "@prisma/client": "^7.8.0",
+        "reflect-metadata": "0.2.2",
+        "rxjs": "^7.8.2"
+    },
+    "devDependencies": {
+        "@prisma/adapter-better-sqlite3": "^7.8.0",
+        "@prisma/adapter-pg": "^7.8.0",
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/node": "24.10.1",
+        "@types/pg": "^8.20.0",
+        "better-sqlite3": "^12.10.0",
+        "dotenv": "^16.4.7",
+        "pg": "^8.21.0",
+        "prisma": "^7.8.0",
+        "tsx": "4.19.3",
+        "typescript": "5.9.3",
+        "vitest": "^4.1.10"
+    }
+}

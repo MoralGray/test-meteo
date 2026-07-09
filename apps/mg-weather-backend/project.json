@@ -1,0 +1,68 @@
+{
+    "$schema": "../../node_modules/nx/schemas/nx-schema.json",
+    "name": "mg-weather-backend",
+    "project": {
+        "type": "application"
+    },
+    "sourceRoot": "apps/mg-weather-backend",
+    "targets": {
+        "dev": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run dev",
+                "cwd": "apps/mg-weather-backend"
+            },
+            "forwardAllArgs": true,
+            "continuous": true
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "echo 'Backend is run via tsx, no build step'",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "start": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run start",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "db:push": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run db:push",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "db:generate": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run db:generate",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "typecheck": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run typecheck",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "test": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run test",
+                "cwd": "apps/mg-weather-backend"
+            }
+        },
+        "lint": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run lint",
+                "cwd": "apps/mg-weather-backend"
+            }
+        }
+    }
+}

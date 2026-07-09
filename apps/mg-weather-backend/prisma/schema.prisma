@@ -1,0 +1,44 @@
+generator client {
+    provider = "prisma-client"
+    output   = "../src/generated/prisma"
+}
+
+datasource db {
+    provider = "sqlite"
+}
+
+model City {
+    id       Int     @id @default(autoincrement())
+    name     String
+    country  String
+    lat      Float
+    lon      Float
+    timezone String?
+
+    favoriteCities  FavoriteCity[]
+    weatherSnapshots WeatherSnapshot[]
+
+    @@unique([name, country])
+}
+
+model FavoriteCity {
+    id     Int  @id @default(autoincrement())
+    userId String
+    cityId Int
+
+    city City @relation(fields: [cityId], references: [id])
+
+    @@unique([userId, cityId])
+}
+
+model WeatherSnapshot {
+    id          Int      @id @default(autoincrement())
+    cityId      Int
+    temperature Float
+    humidity    Float
+    windSpeed   Float
+    weatherCode Int
+    fetchedAt   DateTime @default(now())
+
+    city City @relation(fields: [cityId], references: [id])
+}

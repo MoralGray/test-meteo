@@ -1,0 +1,40 @@
+{
+    "$schema": "../../node_modules/nx/schemas/nx-schema.json",
+    "name": "mg-weather",
+    "project": {
+        "type": "application"
+    },
+    "sourceRoot": "apps/mg-weather/src",
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run build",
+                "cwd": "apps/mg-weather"
+            }
+        },
+        "dev": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run dev",
+                "cwd": "apps/mg-weather"
+            },
+            "forwardAllArgs": true,
+            "continuous": true
+        },
+        "lint": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run lint",
+                "cwd": "apps/mg-weather"
+            }
+        },
+        "typecheck": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npm run typecheck",
+                "cwd": "apps/mg-weather"
+            }
+        }
+    }
+}
