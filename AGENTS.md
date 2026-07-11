@@ -97,74 +97,12 @@ Use only shadcn/ui from `@/components/ui/<name>` (or from `@mg-nx-forge/mg-ui-sh
 - `axios` version pinned via root `overrides` to 1.16.0.
 - `useExhaustiveDependencies` is off in Biome — don't add eslint-plugin-react-hooks.
 
-## TODO.md — detailed rules
+## Skills
 
-### Purpose
+### TODO.md
 
-Track project-wide tasks and epic plans in `TODO.md` at repo root.
+See skill `mg-todo` for rules on creating, updating, and maintaining TODO.md with keyword-based epics.
 
-### Epic structure
+### DOCS.md
 
-- Keyword-based epics: `## epic-keyword | Description` (e.g. `## epic-auth | NestJS Core Authentication and Multi-tenancy`)
-- Each epic has 4 to 15 items depending on scope
-- Epics are independent, no overlap
-- Do not work on an epic unless asked
-- Do not modify tasks or epics unless explicitly requested
-
-### Style guide
-
-- Heading levels allowed: `#`, `##`, `###` only
-- Section titles: `#`
-- Epics: `##`
-- No bold, italics, code ticks, links, or other markdown
-- Lists: only `-` (hyphen) items
-- No `- [ ]` or `- [x]` checkboxes
-- Done items: insert `[DONE]` immediately after the prefix
-  - Examples: `- [DONE] text`, `- - [DONE] text`
-- Do not change original item text except to add `[DONE]`
-- Do not add `[DONE]` to titles (`#`, `##`, `###`)
-
-### Important moments
-
-- Do not change linter settings
-- Do not change how project commands run
-- Do not build project – only run lint
-- Run all commands with `timeout`
-- If user mentions `TODO.md` and work involves its tasks/epics, update `TODO.md` to reflect current state
-
-## Documentation (DOCS.md) — detailed structure
-
-Project docs follow the `{project-name}.DOCS.md` convention at repo root.
-
-### Structure
-- `# Title` — H1 with project name
-- `## Concept` — Bilingual overview (Russian Концепт + English Project Overview)
-- `## Architecture` — Frontend/backend/data-flow with ASCII diagrams
-- `## Features` — Structured feature list
-- `## API Reference` — Endpoints grouped by controller
-- `## Database Schema` — Table descriptions
-- `## State Management` — Stores and storage keys
-
-### Feature entry format
-```markdown
-### Feature: Title
-- ID: F-XXX
-- Status: Done | Planned
-- Description
-- - Item
-- User Flow
-- - Item
-- Technical Notes
-- - Item
-- Test Spec
-- - Navigate to /
-- - Verify result
-```
-
-### Conventions
-- English headings, Russian concept section optional
-- Feature IDs sequential: F-001, F-002...
-- ASCII diagrams for pipeline/data flows
-- Tables for structured data (ports, commands, endpoints)
-- HTML comments (`<!---->`) as separators
-- Future ideas as unordered list at bottom
+See skill `mg-docs` for rules on creating, updating, and maintaining project documentation.
